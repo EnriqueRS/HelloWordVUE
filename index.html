@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ tittle }}</h1>
+        <h1>{{ tittleToUpCase }}</h1>
         <h2 class="bg-dark" :class="amountColor">
             Available money: {{ amount }}
         </h2>
@@ -41,8 +41,10 @@
 
         <button v-on:click="addMoney">Add Money</button>
         <button @click="decreaseMoney" :disabled="disable">Decrease Money</button>
+        <footer-bank></footer-bank>
     </div>
     <script src="main.js"></script>
+    <script src="components/Footer.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>

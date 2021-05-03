@@ -25,6 +25,9 @@ const app = Vue.createApp({
     computed:{
         amountColor(){
             return this.amount > 500 ? 'text-success' : 'text-danger'
+        },
+        tittleToUpCase(){
+            return this.tittle.toUpperCase()
         }
     }
 })
