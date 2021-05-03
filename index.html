@@ -41,7 +41,11 @@
 
         <button v-on:click="addMoney">Add Money</button>
         <button @click="decreaseMoney" :disabled="disable">Decrease Money</button>
-        <footer-bank></footer-bank>
+        <footer-bank 
+            :value="amount"
+            fecha='mayo 2021'
+        >
+        </footer-bank>
     </div>
     <script src="main.js"></script>
     <script src="components/Footer.js"></script>
