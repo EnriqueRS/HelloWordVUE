@@ -10,6 +10,22 @@
 <body>
     <div id="app">
         <h1>{{ tittle }}</h1>
+        <h2>Mi saldo disponible es: {{ amount }}</h2>
+        <a v-bind:href=link>Link</a>
+
+        <hr>
+
+        <h2 v-if="state">Account Available</h2>
+        <h2 v-else="state">Account Disabled</h2>
+
+        <hr>
+
+        <h2 v-if="amount >= 500">Amount: {{ amount }}</h2>
+        <h2 v-else-if="amount < 500 && amount > 0">
+            Amount: 
+            <span style="color: red;">{{ amount }}</span>
+        </h2>
+        <h2 v-else="amount <= 0"> No Amount Available</h2>
     </div>
     <script src="main.js"></script>
     <script>
